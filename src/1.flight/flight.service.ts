@@ -66,10 +66,11 @@ export class FlightService {
     }
 
     async searchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, sort = "ASC", groupByWeekends = false }: I_SearchRoundTripReq): Promise<I_SearchRoundTripRes> {
-        const res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        const res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         // Focused Trip Search
         const focusedRes = res as IE_SkyScannerSearchRoundTripFocused
         const sortedItinerararies = focusedRes.data.itineraries.sort((a, b) => {
+            if (!b?.price || !a?.price) return
             if (sort === 'DESC') {
                 return b.price.raw - a.price.raw
             } else {
