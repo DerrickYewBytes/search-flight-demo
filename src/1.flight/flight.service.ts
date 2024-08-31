@@ -62,7 +62,6 @@ export class FlightService {
                 returnDate: param.returnDate
             }
         }))
-        console.log(response.data)
         return response.data
     }
 
@@ -163,7 +162,6 @@ export class FlightService {
             })
         } else if (situation === "unfocused-anywhere") {
             const unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
-            console.log(unfocusedRes.data.everywhereDestination.results[0].content.flightQuotes.cheapest.rawPrice)
             const sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
                 if (!a?.content.flightQuotes || !b?.content.flightQuotes) return
                 if (sort === 'DESC') {

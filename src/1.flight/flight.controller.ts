@@ -45,7 +45,6 @@ export class FlightController {
   */
   @Get('search-unfocused-round-trip')
   searchUnfocusedRoundTrip(@Query() query: SearchUnfocusedRoundTripDto) {
-    console.log(query)
     return this.flightService.searchUnfocusedRoundTrip(query);
   }
 }
