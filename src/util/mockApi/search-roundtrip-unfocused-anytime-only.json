@@ -1,0 +1,1915 @@
+{
+    "data": {
+        "flightQuotes": {
+            "buckets": [
+                {
+                    "id": "All",
+                    "label": "All",
+                    "resultIds": [
+                        "{bl}:202408280200*D*KUL*DPS*20240924*pcln*OD|202408280200*D*DPS*KUL*20240928*pcln*OD",
+                        "{bl}:202408302202*D*KUL*DPS*20240902*pcln*SL|202408302202*D*DPS*KUL*20240914*pcln*SL",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302348*D*DPS*KUL*20240924*aasi*QZ",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302348*D*DPS*KUL*20240924*aasi*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408310008*D*KUL*DPS*20240922*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408290552*D*KUL*DPS*20240923*pcln*SL|202408290552*D*DPS*KUL*20240926*pcln*SL",
+                        "{bl}:202408271634*D*KUL*DPS*20240922*skyp*OD|202408271634*D*DPS*KUL*20240926*skyp*AK"
+                    ]
+                },
+                {
+                    "id": "Weekend_1_1",
+                    "label": "Weekend trips",
+                    "resultIds": [
+                        "{bl}:202408310008*D*KUL*DPS*20240922*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408270950*D*KUL*DPS*20240921*skyp*OD|202408270950*D*DPS*KUL*20240923*skyp*D7",
+                        "{bl}:202408290925*D*KUL*DPS*20240926*skyp*QZ|202408290925*D*DPS*KUL*20240928*skyp*OD",
+                        "{bl}:202408302214*D*KUL*DPS*20240907*skyp*QZ|202408302214*D*DPS*KUL*20240909*skyp*AK",
+                        "{bl}:202408301105*D*KUL*DPS*20240920*edus*OD|202408301105*D*DPS*KUL*20240922*edus*OD",
+                        "{bl}:202408282237*I*KUL*DPS*20240928*dhop*TR|202408282237*I*DPS*KUL*20240930*dhop*AK",
+                        "{bl}:202408310026*D*KUL*DPS*20240927*aaid*QZ|202408302250*D*DPS*KUL*20240929*aaid*QZ",
+                        "{bl}:202408302135*D*KUL*DPS*20240928*aasi*AK|202408301858*D*DPS*KUL*20240930*aasi*AK",
+                        "{bl}:202408310159*D*KUL*DPS*20240908*aaid*QZ|202408310041*D*DPS*KUL*20240910*aaid*QZ"
+                    ]
+                },
+                {
+                    "id": "LongWeekend_2_3",
+                    "label": "Long weekends",
+                    "resultIds": [
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302348*D*DPS*KUL*20240924*aasi*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408301130*D*DPS*KUL*20240925*aaid*AK",
+                        "{bl}:202408310144*D*KUL*DPS*20240907*aaid*QZ|202408302345*D*DPS*KUL*20240911*aaid*D7",
+                        "{bl}:202408300633*D*KUL*DPS*20240925*cust*OD|202408300633*D*DPS*KUL*20240929*cust*OD",
+                        "{bl}:202408301724*D*KUL*DPS*20240919*skyp*OD|202408301724*D*DPS*KUL*20240923*skyp*QZ",
+                        "{bl}:202408282011*D*KUL*DPS*20240907*skyp*QZ|202408282011*D*DPS*KUL*20240910*skyp*OD",
+                        "{bl}:202408271209*D*KUL*DPS*20240906*edus*OD|202408271209*D*DPS*KUL*20240909*edus*OD",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302008*D*DPS*KUL*20240923*aasi*AK"
+                    ]
+                },
+                {
+                    "id": "TripDurationRangeDays_2_4",
+                    "label": "3–4 days",
+                    "resultIds": [
+                        "{bl}:202408280200*D*KUL*DPS*20240924*pcln*OD|202408280200*D*DPS*KUL*20240928*pcln*OD",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302348*D*DPS*KUL*20240924*aasi*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408290552*D*KUL*DPS*20240923*pcln*SL|202408290552*D*DPS*KUL*20240926*pcln*SL",
+                        "{bl}:202408271634*D*KUL*DPS*20240922*skyp*OD|202408271634*D*DPS*KUL*20240926*skyp*AK",
+                        "{bl}:202408291621*D*KUL*DPS*20240921*skyp*AK|202408291621*D*DPS*KUL*20240926*skyp*AK",
+                        "{bl}:202408280753*D*KUL*DPS*20240922*skyp*OD|202408280753*D*DPS*KUL*20240925*skyp*QZ",
+                        "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408301130*D*DPS*KUL*20240925*aaid*AK",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408301130*D*DPS*KUL*20240925*aasi*AK"
+                    ]
+                },
+                {
+                    "id": "OneWeek_4_6",
+                    "label": "1 week",
+                    "resultIds": [
+                        "{bl}:202408291621*D*KUL*DPS*20240921*skyp*AK|202408291621*D*DPS*KUL*20240926*skyp*AK",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408301130*D*DPS*KUL*20240925*aasi*AK",
+                        "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408310048*D*DPS*KUL*20240926*aasi*AK",
+                        "{bl}:202408280841*D*KUL*DPS*20240909*pcln*SL|202408280841*D*DPS*KUL*20240914*pcln*SL",
+                        "{bl}:202408301653*D*KUL*DPS*20240907*edus*OD|202408301653*D*DPS*KUL*20240913*edus*OD",
+                        "{bl}:202408302146*D*KUL*DPS*20240918*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408292329*D*KUL*DPS*20240906*skyp*AK|202408292329*D*DPS*KUL*20240911*skyp*AK",
+                        "{bl}:202408310040*D*KUL*DPS*20240919*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                        "{bl}:202408310144*D*KUL*DPS*20240907*aaid*QZ|202408310008*D*DPS*KUL*20240914*aaid*D7"
+                    ]
+                },
+                {
+                    "id": "OnePlusWeeks_6_12",
+                    "label": "1+ weeks",
+                    "resultIds": [
+                        "{bl}:202408302202*D*KUL*DPS*20240902*pcln*SL|202408302202*D*DPS*KUL*20240914*pcln*SL",
+                        "{bl}:202408310000*D*KUL*DPS*20240902*skyp*OD|202408310000*D*DPS*KUL*20240913*skyp*OD",
+                        "{bl}:202408310144*D*KUL*DPS*20240907*aaid*QZ|202408310008*D*DPS*KUL*20240914*aaid*D7",
+                        "{bl}:202408271348*D*KUL*DPS*20240920*skyp*OD|202408271348*D*DPS*KUL*20240930*skyp*QZ",
+                        "{bl}:202408282137*D*KUL*DPS*20240918*xpus*QZ|202408282137*D*DPS*KUL*20240925*xpus*AK",
+                        "{bl}:202408292045*D*KUL*DPS*20240919*skyp*OD|202408292045*D*DPS*KUL*20240926*skyp*OD",
+                        "{bl}:202408301656*D*KUL*DPS*20240922*skyp*QZ|202408301656*D*DPS*KUL*20240930*skyp*D7",
+                        "{bl}:202408292211*D*KUL*DPS*20240920*skyp*QZ|202408292211*D*DPS*KUL*20240928*skyp*OD",
+                        "{bl}:202408272059*D*KUL*DPS*20240904*skyp*D7|202408272059*D*DPS*KUL*20240914*skyp*D7"
+                    ]
+                }
+            ],
+            "results": [
+                {
+                    "id": "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408301130*D*DPS*KUL*20240925*aaid*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$166",
+                        "rawPrice": 166,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-21",
+                            "localDepartureDateLabel": "Sat, Sep 21"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-25",
+                            "localDepartureDateLabel": "Wed, Sep 25"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302008*D*DPS*KUL*20240923*aasi*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$197",
+                        "rawPrice": 197,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-23",
+                            "localDepartureDateLabel": "Mon, Sep 23"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408271209*D*KUL*DPS*20240906*edus*OD|202408271209*D*DPS*KUL*20240909*edus*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$196",
+                        "rawPrice": 196,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-06",
+                            "localDepartureDateLabel": "Fri, Sep 6"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-09",
+                            "localDepartureDateLabel": "Mon, Sep 9"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408302135*D*KUL*DPS*20240928*aasi*AK|202408301858*D*DPS*KUL*20240930*aasi*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$224",
+                        "rawPrice": 224,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-28",
+                            "localDepartureDateLabel": "Sat, Sep 28"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-30",
+                            "localDepartureDateLabel": "Mon, Sep 30"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408310048*D*DPS*KUL*20240926*aasi*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$168",
+                        "rawPrice": 168,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "tripDuration": "6-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408272059*D*KUL*DPS*20240904*skyp*D7|202408272059*D*DPS*KUL*20240914*skyp*D7",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$182",
+                        "rawPrice": 182,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-04",
+                            "localDepartureDateLabel": "Wed, Sep 4"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-14",
+                            "localDepartureDateLabel": "Sat, Sep 14"
+                        },
+                        "tripDuration": "10-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301105*D*KUL*DPS*20240920*edus*OD|202408301105*D*DPS*KUL*20240922*edus*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$207",
+                        "rawPrice": 207,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-22",
+                            "localDepartureDateLabel": "Sun, Sep 22"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408300633*D*KUL*DPS*20240925*cust*OD|202408300633*D*DPS*KUL*20240929*cust*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$184",
+                        "rawPrice": 184,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-25",
+                            "localDepartureDateLabel": "Wed, Sep 25"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-29",
+                            "localDepartureDateLabel": "Sun, Sep 29"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408292329*D*KUL*DPS*20240906*skyp*AK|202408292329*D*DPS*KUL*20240911*skyp*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$172",
+                        "rawPrice": 172,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-06",
+                            "localDepartureDateLabel": "Fri, Sep 6"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-11",
+                            "localDepartureDateLabel": "Wed, Sep 11"
+                        },
+                        "tripDuration": "5-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408302348*D*DPS*KUL*20240924*aasi*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$157",
+                        "rawPrice": 157,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408282237*I*KUL*DPS*20240928*dhop*TR|202408282237*I*DPS*KUL*20240930*dhop*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$222",
+                        "rawPrice": 222,
+                        "direct": false,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-28",
+                            "localDepartureDateLabel": "Sat, Sep 28"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-30",
+                            "localDepartureDateLabel": "Mon, Sep 30"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301710*D*KUL*DPS*20240920*aasi*AK|202408301130*D*DPS*KUL*20240925*aasi*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$166",
+                        "rawPrice": 166,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-25",
+                            "localDepartureDateLabel": "Wed, Sep 25"
+                        },
+                        "tripDuration": "5-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310159*D*KUL*DPS*20240908*aaid*QZ|202408310041*D*DPS*KUL*20240910*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$234",
+                        "rawPrice": 234,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-08",
+                            "localDepartureDateLabel": "Sun, Sep 8"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-10",
+                            "localDepartureDateLabel": "Tue, Sep 10"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408280753*D*KUL*DPS*20240922*skyp*OD|202408280753*D*DPS*KUL*20240925*skyp*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$165",
+                        "rawPrice": 165,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-22",
+                            "localDepartureDateLabel": "Sun, Sep 22"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-25",
+                            "localDepartureDateLabel": "Wed, Sep 25"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408271634*D*KUL*DPS*20240922*skyp*OD|202408271634*D*DPS*KUL*20240926*skyp*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$162",
+                        "rawPrice": 162,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-22",
+                            "localDepartureDateLabel": "Sun, Sep 22"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408302214*D*KUL*DPS*20240907*skyp*QZ|202408302214*D*DPS*KUL*20240909*skyp*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$199",
+                        "rawPrice": 199,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-07",
+                            "localDepartureDateLabel": "Sat, Sep 7"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-09",
+                            "localDepartureDateLabel": "Mon, Sep 9"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310000*D*KUL*DPS*20240902*skyp*OD|202408310000*D*DPS*KUL*20240913*skyp*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$173",
+                        "rawPrice": 173,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-02",
+                            "localDepartureDateLabel": "Mon, Sep 2"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-13",
+                            "localDepartureDateLabel": "Fri, Sep 13"
+                        },
+                        "tripDuration": "11-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408291621*D*KUL*DPS*20240921*skyp*AK|202408291621*D*DPS*KUL*20240926*skyp*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$164",
+                        "rawPrice": 164,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-21",
+                            "localDepartureDateLabel": "Sat, Sep 21"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "tripDuration": "5-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408282011*D*KUL*DPS*20240907*skyp*QZ|202408282011*D*DPS*KUL*20240910*skyp*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$195",
+                        "rawPrice": 195,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-07",
+                            "localDepartureDateLabel": "Sat, Sep 7"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-10",
+                            "localDepartureDateLabel": "Tue, Sep 10"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408302214*D*KUL*DPS*20240921*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$157",
+                        "rawPrice": 157,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-21",
+                            "localDepartureDateLabel": "Sat, Sep 21"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408302146*D*KUL*DPS*20240918*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$172",
+                        "rawPrice": 172,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-18",
+                            "localDepartureDateLabel": "Wed, Sep 18"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "tripDuration": "6-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408280841*D*KUL*DPS*20240909*pcln*SL|202408280841*D*DPS*KUL*20240914*pcln*SL",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$169",
+                        "rawPrice": 169,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-09",
+                            "localDepartureDateLabel": "Mon, Sep 9"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-14",
+                            "localDepartureDateLabel": "Sat, Sep 14"
+                        },
+                        "tripDuration": "5-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310040*D*KUL*DPS*20240919*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$173",
+                        "rawPrice": 173,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-19",
+                            "localDepartureDateLabel": "Thu, Sep 19"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "tripDuration": "5-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301724*D*KUL*DPS*20240919*skyp*OD|202408301724*D*DPS*KUL*20240923*skyp*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$194",
+                        "rawPrice": 194,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-19",
+                            "localDepartureDateLabel": "Thu, Sep 19"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-23",
+                            "localDepartureDateLabel": "Mon, Sep 23"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310008*D*KUL*DPS*20240922*aaid*QZ|202408302348*D*DPS*KUL*20240924*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$157",
+                        "rawPrice": 157,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-22",
+                            "localDepartureDateLabel": "Sun, Sep 22"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310026*D*KUL*DPS*20240927*aaid*QZ|202408302250*D*DPS*KUL*20240929*aaid*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$223",
+                        "rawPrice": 223,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-27",
+                            "localDepartureDateLabel": "Fri, Sep 27"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-29",
+                            "localDepartureDateLabel": "Sun, Sep 29"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408292211*D*KUL*DPS*20240920*skyp*QZ|202408292211*D*DPS*KUL*20240928*skyp*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$182",
+                        "rawPrice": 182,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-28",
+                            "localDepartureDateLabel": "Sat, Sep 28"
+                        },
+                        "tripDuration": "8-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301656*D*KUL*DPS*20240922*skyp*QZ|202408301656*D*DPS*KUL*20240930*skyp*D7",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$179",
+                        "rawPrice": 179,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-22",
+                            "localDepartureDateLabel": "Sun, Sep 22"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-30",
+                            "localDepartureDateLabel": "Mon, Sep 30"
+                        },
+                        "tripDuration": "8-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408290552*D*KUL*DPS*20240923*pcln*SL|202408290552*D*DPS*KUL*20240926*pcln*SL",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$157",
+                        "rawPrice": 157,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-23",
+                            "localDepartureDateLabel": "Mon, Sep 23"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "tripDuration": "3-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408301653*D*KUL*DPS*20240907*edus*OD|202408301653*D*DPS*KUL*20240913*edus*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$170",
+                        "rawPrice": 170,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-07",
+                            "localDepartureDateLabel": "Sat, Sep 7"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-13",
+                            "localDepartureDateLabel": "Fri, Sep 13"
+                        },
+                        "tripDuration": "6-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408271348*D*KUL*DPS*20240920*skyp*OD|202408271348*D*DPS*KUL*20240930*skyp*QZ",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$177",
+                        "rawPrice": 177,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-20",
+                            "localDepartureDateLabel": "Fri, Sep 20"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-30",
+                            "localDepartureDateLabel": "Mon, Sep 30"
+                        },
+                        "tripDuration": "10-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408270950*D*KUL*DPS*20240921*skyp*OD|202408270950*D*DPS*KUL*20240923*skyp*D7",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$192",
+                        "rawPrice": 192,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-21",
+                            "localDepartureDateLabel": "Sat, Sep 21"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-23",
+                            "localDepartureDateLabel": "Mon, Sep 23"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310144*D*KUL*DPS*20240907*aaid*QZ|202408302345*D*DPS*KUL*20240911*aaid*D7",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$176",
+                        "rawPrice": 176,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-07",
+                            "localDepartureDateLabel": "Sat, Sep 7"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-11",
+                            "localDepartureDateLabel": "Wed, Sep 11"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408292045*D*KUL*DPS*20240919*skyp*OD|202408292045*D*DPS*KUL*20240926*skyp*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$178",
+                        "rawPrice": 178,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-19",
+                            "localDepartureDateLabel": "Thu, Sep 19"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "tripDuration": "7-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408310144*D*KUL*DPS*20240907*aaid*QZ|202408310008*D*DPS*KUL*20240914*aaid*D7",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$175",
+                        "rawPrice": 175,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-07",
+                            "localDepartureDateLabel": "Sat, Sep 7"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-14",
+                            "localDepartureDateLabel": "Sat, Sep 14"
+                        },
+                        "tripDuration": "7-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408282137*D*KUL*DPS*20240918*xpus*QZ|202408282137*D*DPS*KUL*20240925*xpus*AK",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$178",
+                        "rawPrice": 178,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-18",
+                            "localDepartureDateLabel": "Wed, Sep 18"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-25",
+                            "localDepartureDateLabel": "Wed, Sep 25"
+                        },
+                        "tripDuration": "7-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408280200*D*KUL*DPS*20240924*pcln*OD|202408280200*D*DPS*KUL*20240928*pcln*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$151",
+                        "rawPrice": 151,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-24",
+                            "localDepartureDateLabel": "Tue, Sep 24"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-28",
+                            "localDepartureDateLabel": "Sat, Sep 28"
+                        },
+                        "tripDuration": "4-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408290925*D*KUL*DPS*20240926*skyp*QZ|202408290925*D*DPS*KUL*20240928*skyp*OD",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$198",
+                        "rawPrice": 198,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-26",
+                            "localDepartureDateLabel": "Thu, Sep 26"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-28",
+                            "localDepartureDateLabel": "Sat, Sep 28"
+                        },
+                        "tripDuration": "2-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                },
+                {
+                    "id": "{bl}:202408302202*D*KUL*DPS*20240902*pcln*SL|202408302202*D*DPS*KUL*20240914*pcln*SL",
+                    "type": "FLIGHT_QUOTE",
+                    "content": {
+                        "price": "$156",
+                        "rawPrice": 156,
+                        "direct": true,
+                        "outboundLeg": {
+                            "originAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-02",
+                            "localDepartureDateLabel": "Mon, Sep 2"
+                        },
+                        "inboundLeg": {
+                            "originAirport": {
+                                "id": "95673809",
+                                "skyCode": "DPS",
+                                "name": "DPS",
+                                "type": "Airport"
+                            },
+                            "destinationAirport": {
+                                "id": "95673456",
+                                "skyCode": "KUL",
+                                "name": "KUL",
+                                "type": "Airport"
+                            },
+                            "localDepartureDate": "2024-09-14",
+                            "localDepartureDateLabel": "Sat, Sep 14"
+                        },
+                        "tripDuration": "12-day trip"
+                    },
+                    "entityId": "eyJlIjoiOTU2NzM4MDkiLCJzIjoiRFBTIiwidCI6bnVsbH0=",
+                    "skyId": "DPS"
+                }
+            ],
+            "months": [
+                {
+                    "year": 2024,
+                    "month": 8,
+                    "monthLabel": "Aug",
+                    "selected": false
+                },
+                {
+                    "year": 2024,
+                    "month": 9,
+                    "monthLabel": "Sep",
+                    "selected": true
+                },
+                {
+                    "year": 2024,
+                    "month": 10,
+                    "monthLabel": "Oct",
+                    "selected": false
+                },
+                {
+                    "year": 2024,
+                    "month": 11,
+                    "monthLabel": "Nov",
+                    "selected": false
+                },
+                {
+                    "year": 2024,
+                    "month": 12,
+                    "monthLabel": "Dec",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 1,
+                    "monthLabel": "Jan",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 2,
+                    "monthLabel": "Feb",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 3,
+                    "monthLabel": "Mar",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 4,
+                    "monthLabel": "Apr",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 5,
+                    "monthLabel": "May",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 6,
+                    "monthLabel": "Jun",
+                    "selected": false
+                },
+                {
+                    "year": 2025,
+                    "month": 7,
+                    "monthLabel": "Jul",
+                    "selected": false
+                }
+            ],
+            "context": {
+                "status": "complete",
+                "sessionId": "UNFOCUSED_SESSION_ID",
+                "totalResults": 39
+            }
+        },
+        "differentDestination": {
+            "location": {
+                "id": "29475321",
+                "skyCode": "ID",
+                "name": "Indonesia",
+                "type": "Nation"
+            },
+            "context": {
+                "status": "complete",
+                "sessionId": "UNFOCUSED_SESSION_ID",
+                "totalResults": 0
+            }
+        },
+        "context": {
+            "status": "complete",
+            "sessionId": "UNFOCUSED_SESSION_ID",
+            "totalResults": 0
+        }
+    },
+    "status": true,
+    "message": "Successful"
+}

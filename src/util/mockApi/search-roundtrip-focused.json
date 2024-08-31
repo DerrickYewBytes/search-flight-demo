@@ -1,4 +1,4 @@
-export const MockSearchRoundTrip = {
+{
     "data": {
         "context": {
             "status": "incomplete",
