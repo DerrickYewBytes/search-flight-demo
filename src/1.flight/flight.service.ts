@@ -5,7 +5,7 @@ import { HttpService } from '@nestjs/axios';
 import * as MockSearchRoundTripFocused from '../util/mockApi/search-roundtrip-focused.json';
 import * as MockSearchRoundTripUnfocusedAnywhereAnytime from '../util/mockApi/search-roundtrip-unfocused-anywhere-anytime.json';
 import * as MockSearchRoundTripUnfocusedAnytimeOnly from '../util/mockApi/search-roundtrip-unfocused-anytime-only.json';
-import * as MockSearchRoundTripUnfocusedAnywhereFixedTime from '../util/mockApi/search-roundtrip-unfocused-anywhere-fixed-time.json';
+import * as MockSearchRoundTripUnfocusedAnywhereFixedDate from '../util/mockApi/search-roundtrip-unfocused-anywhere-fixed-date.json';
 
 import { firstValueFrom } from 'rxjs';
 
@@ -41,7 +41,7 @@ export class FlightService {
             case "unfocused-anytime":
                 return MockSearchRoundTripUnfocusedAnytimeOnly as IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
             case "unfocused-anywhere":
-                return MockSearchRoundTripUnfocusedAnywhereFixedTime as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
+                return MockSearchRoundTripUnfocusedAnywhereFixedDate as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
             case "unfocused-anywhere-anytime":
                 return MockSearchRoundTripUnfocusedAnywhereAnytime as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
         }
@@ -132,7 +132,7 @@ export class FlightService {
     async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, sort = "ASC" }: I_SearchUnfocusedRoundTripReq): Promise<any> {
         const situation = this.determineSkyScannerSearchRoundTripResponseType({ fromEntityId, toEntityId, departDate, returnDate })
 
-        const res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        const res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         if (situation === "unfocused-anywhere-anytime") {
             const unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
             const sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
