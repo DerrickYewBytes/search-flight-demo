@@ -24,7 +24,8 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Search-flight demo repository. 
+This demo project is to demonstrate the use of [Flights Scraper API](https://rapidapi.com/ntd119/api/sky-scanner3) from RapidAPI to generate round flight search
 
 ## Installation
 
@@ -64,9 +65,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Derrick Yew](https://derrickyewbytes.github.io/)
 
 ## License
 
