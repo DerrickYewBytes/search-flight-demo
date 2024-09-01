@@ -3,8 +3,7 @@ export type I_SearchRoundTripReq = {
     toEntityId: string;
     departDate: string;
     returnDate: string;
-    sort?: 'ASC' | 'DESC';
-    groupByWeekends?: boolean;
+    priceSort?: 'ASC' | 'DESC';
 };
 
 export type I_SearchUnfocusedRoundTripReq = {
@@ -12,7 +11,7 @@ export type I_SearchUnfocusedRoundTripReq = {
     toEntityId?: string;
     departDate?: string;
     returnDate?: string;
-    sort?: 'ASC' | 'DESC';
+    priceSort?: 'ASC' | 'DESC';
     groupByWeekends?: boolean;
 };
 
