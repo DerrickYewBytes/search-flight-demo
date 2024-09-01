@@ -52,13 +52,61 @@ export type I_Itinerary = {
     }[];
 };
 
-export type I_SearchRoundTripRes =
+export type I_SearchFocusedRoundTripRes = {
+    itineraries: I_Itinerary[];
+};
+
+export type I_UnfocusedRoundTripTypes =
+    | 'focused'
+    | 'unfocused-anytime'
+    | 'unfocused-anywhere'
+    | 'unfocused-anywhere-anytime';
+
+export type I_FlightQuote = {
+    id: string;
+    price: {
+        raw: number;
+        formatted: string;
+    };
+    trips: {
+        departureDate: string;
+        origin: {
+            id: string;
+            name: string;
+            displayCode: string;
+        };
+        destination: {
+            id: string;
+            name: string;
+            displayCode: string;
+        };
+    }[];
+};
+
+export type I_GeneralFlightSearch = {
+    id: string;
+    price: {
+        raw: number;
+        formatted: string;
+    };
+    location: {
+        id: string;
+        skyCode: string;
+        name: string;
+    };
+};
+
+export type I_SearchUnfocusedRoundTripRes =
     | {
-          itineraries: I_Itinerary[];
+          responseType: I_UnfocusedRoundTripTypes;
+          itineraries: I_FlightQuote[] | I_GeneralFlightSearch[];
       }
     | {
-          weekends: I_Itinerary[];
-          weekdays: I_Itinerary[];
+          responseType: I_UnfocusedRoundTripTypes;
+          groupedResult: {
+              weekends: I_FlightQuote[];
+              weekdays: I_FlightQuote[];
+          };
       };
 
 export type IE_SkyScannerSearchRoundTrip =

@@ -10,7 +10,6 @@ export class FlightController {
   /*
   API 1.1 - Search Focused Round Trip
   This API is used to do focused search on roundtrip. It will return a list of itineraries, and can be optionally sorted by price.
-  This API can also group trips into weekends and weekdays based on the return trip's departure date if groupByWeekends is set to true.
   Trip origin and destination, and departure and return date must be defined.
 
   params: 
@@ -23,13 +22,13 @@ export class FlightController {
   */
   @Get('search-focused-round-trip')
   searchFocusedRoundTrip(@Query() query: SearchFocusedRoundTripDto) {
-    return this.flightService.searchRoundTrip(query);
+    return this.flightService.searchFocusedRoundTrip(query);
   }
 
   /*
   API 1.2 - Search Unfocused Round Trip
   This API is used to do unfocused search on roundtrip. It will return a list of possible itineraries, and can be optionally sorted by price.
-  This API can also group trips into weekends and weekdays based on the return trip's departure date if groupByWeekends is set to true.
+  This API can group trips into weekends and weekdays based on the return trip's departure date if groupByWeekends is set to true and the search type is with both locations specified.
   Trip origin must be defined, but destination, and departure and return date are optional.
   
   If departDate and returnDate is undefined, the result will be a list of itineraries with set origin and destination but without any date set.

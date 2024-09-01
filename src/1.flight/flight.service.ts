@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { I_Itinerary, I_SearchRoundTripReq, I_SearchRoundTripRes, I_SearchUnfocusedRoundTripReq, IE_SkyScannerSearchRoundTrip, IE_SkyScannerSearchRoundTripFocused, IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly, IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime, IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime } from './flight.type';
+import { I_Itinerary, I_SearchRoundTripReq, I_SearchFocusedRoundTripRes, I_SearchUnfocusedRoundTripRes, I_SearchUnfocusedRoundTripReq, IE_SkyScannerSearchRoundTrip, IE_SkyScannerSearchRoundTripFocused, IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly, IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime, IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime, I_FlightQuote, I_GeneralFlightSearch, I_UnfocusedRoundTripTypes } from './flight.type';
 import { HttpService } from '@nestjs/axios';
 import * as MockSearchRoundTripFocused from '../util/mockApi/search-roundtrip-focused.json';
 import * as MockSearchRoundTripUnfocusedAnywhereAnytime from '../util/mockApi/search-roundtrip-unfocused-anywhere-anytime.json';
@@ -15,8 +15,8 @@ export class FlightService {
         private readonly httpService: HttpService
     ) { }
 
-    determineSkyScannerSearchRoundTripResponseType({ toEntityId, departDate, returnDate }: I_SearchRoundTripReq | I_SearchUnfocusedRoundTripReq): "focused" | "unfocused-anytime" | "unfocused-anywhere" | "unfocused-anywhere-anytime" {
-        let situation: "focused" | "unfocused-anytime" | "unfocused-anywhere" | "unfocused-anywhere-anytime"
+    determineSkyScannerSearchRoundTripResponseType({ toEntityId, departDate, returnDate }: I_SearchRoundTripReq | I_SearchUnfocusedRoundTripReq): I_UnfocusedRoundTripTypes {
+        let situation: I_UnfocusedRoundTripTypes
         const dateIsPresent = departDate && returnDate
         if (toEntityId && dateIsPresent) {
             situation = "focused";
@@ -65,8 +65,13 @@ export class FlightService {
         return response.data
     }
 
-    async searchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC" }: I_SearchRoundTripReq): Promise<I_SearchRoundTripRes> {
-        const res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+    async searchFocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC" }: I_SearchRoundTripReq): Promise<I_SearchFocusedRoundTripRes> {
+        let res
+        if (process.env.NODE_ENV === 'DEV') {
+            res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        } else if (process.env.NODE_ENV === 'TEST') {
+            res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        }
         // Focused Trip Search
         const focusedRes = res as IE_SkyScannerSearchRoundTripFocused
         const sortedItinerararies = focusedRes.data.itineraries.sort((a, b) => {
@@ -113,11 +118,9 @@ export class FlightService {
 
     }
 
-    async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC", groupByWeekends = false }: I_SearchUnfocusedRoundTripReq): Promise<any> {
+    async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC", groupByWeekends = false }: I_SearchUnfocusedRoundTripReq): Promise<I_SearchUnfocusedRoundTripRes> {
         let result: any
         let groupedResult: any
-        let unfocusedRes
-        let sortedItinerararies
 
         const situation = this.determineSkyScannerSearchRoundTripResponseType({ fromEntityId, toEntityId, departDate, returnDate })
 
@@ -126,75 +129,138 @@ export class FlightService {
             throw new Error("Invalid parameters, unfocused search with fixed date cannot carry out group by weekend function")
         }
 
-        const res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        let res
+        if (process.env.NODE_ENV === 'DEV') {
+            res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        } else if (process.env.NODE_ENV === 'TEST') {
+            res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+        }
 
-        switch (situation) {
-            case "unfocused-anytime":
-                unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
-                sortedItinerararies = unfocusedRes.data.flightQuotes.results.sort((a, b) => {
-                    if (!a?.content || !b?.content) return
-                    if (priceSort === 'DESC') {
-                        return b.content.rawPrice - a.content.rawPrice
-                    } else {
-                        return a.content.rawPrice - b.content.rawPrice
-                    }
-                })
-                result = sortedItinerararies.map(itinerary => {
-                    return itinerary
-                })
-                if (groupByWeekends) {
-                    groupedResult = result.reduce((acc, item) => {
-                        if (!item?.content) return acc
-                        const departureDate = new Date(item.content.outboundLeg.localDepartureDate)
-                        if (departureDate.getDay() === 6 || departureDate.getDay() === 0) {
-                            acc.weekends.push(item)
-                        } else {
-                            acc.weekdays.push(item)
-                        }
-                        return acc
-                    }, {
-                        weekends: [],
-                        weekdays: []
-                    })
+        if (situation === 'unfocused-anytime') {
+            const unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
+            const sortedItinerararies = unfocusedRes.data.flightQuotes.results.sort((a, b) => {
+                if (!a?.content || !b?.content) return
+                if (priceSort === 'DESC') {
+                    return b.content.rawPrice - a.content.rawPrice
+                } else {
+                    return a.content.rawPrice - b.content.rawPrice
                 }
-                break;
-            case "unfocused-anywhere":
-                unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
-                sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
-                    if (!a?.content.flightQuotes || !b?.content.flightQuotes) return
-                    if (priceSort === 'DESC') {
-                        return b.content.flightQuotes.cheapest.rawPrice - a.content.flightQuotes.cheapest.rawPrice
+            })
+            result = sortedItinerararies.map(item => {
+                return {
+                    id: item.id,
+                    price: {
+                        raw: item.content.rawPrice,
+                        formatted: item.content.price,
+                    },
+                    trips: [
+                        {
+                            departureDate: item.content.outboundLeg.localDepartureDate,
+                            origin: {
+                                id: item.content.outboundLeg.originAirport.id,
+                                name: item.content.outboundLeg.originAirport.name,
+                                displayCode: item.content.outboundLeg.originAirport.skyCode
+                            },
+                            destination: {
+                                id: item.content.outboundLeg.destinationAirport.id,
+                                name: item.content.outboundLeg.destinationAirport.name,
+                                displayCode: item.content.outboundLeg.destinationAirport.skyCode
+                            }
+                        },
+                        {
+                            departureDate: item.content.inboundLeg.localDepartureDate,
+                            origin: {
+                                id: item.content.inboundLeg.originAirport.id,
+                                name: item.content.inboundLeg.originAirport.name,
+                                displayCode: item.content.inboundLeg.originAirport.skyCode
+                            },
+                            destination: {
+                                id: item.content.inboundLeg.destinationAirport.id,
+                                name: item.content.inboundLeg.destinationAirport.name,
+                                displayCode: item.content.inboundLeg.destinationAirport.skyCode
+                            }
+                        }
+                    ]
+
+                } as I_FlightQuote
+            })
+            if (groupByWeekends) {
+                groupedResult = result.reduce((acc, item: I_FlightQuote) => {
+                    if (!item?.trips) return acc
+                    const departureDate = new Date(item.trips[0].departureDate)
+                    if (departureDate.getDay() === 6 || departureDate.getDay() === 0) {
+                        acc.weekends.push(item)
                     } else {
-                        return a.content.flightQuotes.cheapest.rawPrice - b.content.flightQuotes.cheapest.rawPrice
-                    };
-                });
-                result = sortedItinerararies.map(itinerary => {
-                    return itinerary
+                        acc.weekdays.push(item)
+                    }
+                    return acc
+                }, {
+                    weekends: [],
+                    weekdays: []
                 })
-                break;
-            case "unfocused-anywhere-anytime":
-                unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
-                sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
-                    if (!a?.content?.flightQuotes || !b?.content?.flightQuotes) return
-                    if (priceSort === 'DESC') {
-                        return b.content.flightQuotes.cheapest.rawPrice - a.content.flightQuotes.cheapest.rawPrice
-                    } else {
-                        return a.content.flightQuotes.cheapest.rawPrice - b.content.flightQuotes.cheapest.rawPrice
-                    };
-                });
-                result = sortedItinerararies.map(itinerary => {
-                    return itinerary
-                })
-                break;
+            }
+        } else if (situation === 'unfocused-anywhere') {
+            const unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
+            const sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
+                if (!a?.content.flightQuotes || !b?.content.flightQuotes) return
+                if (priceSort === 'DESC') {
+                    return b.content.flightQuotes.cheapest.rawPrice - a.content.flightQuotes.cheapest.rawPrice
+                } else {
+                    return a.content.flightQuotes.cheapest.rawPrice - b.content.flightQuotes.cheapest.rawPrice
+                };
+            });
+            result = sortedItinerararies.map(item => {
+                if (!item?.content?.flightQuotes) return
+                return {
+                    id: item.id,
+                    price: {
+                        raw: item.content.flightQuotes.cheapest.rawPrice,
+                        formatted: item.content.flightQuotes.cheapest.price
+                    },
+                    location: {
+                        id: item.content.location.id,
+                        skyCode: item.content.location.skyCode,
+                        name: item.content.location.name
+                    }
+                } as I_GeneralFlightSearch
+            })
+        } else if (situation === 'unfocused-anywhere-anytime') {
+            const unfocusedRes = res as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
+            const sortedItinerararies = unfocusedRes.data.everywhereDestination.results.sort((a, b) => {
+                if (!a?.content?.flightQuotes || !b?.content?.flightQuotes) return
+                if (priceSort === 'DESC') {
+                    return b.content.flightQuotes.cheapest.rawPrice - a.content.flightQuotes.cheapest.rawPrice
+                } else {
+                    return a.content.flightQuotes.cheapest.rawPrice - b.content.flightQuotes.cheapest.rawPrice
+                };
+            });
+            result = sortedItinerararies.map(item => {
+                if (!item?.content?.flightQuotes) return
+                return {
+                    id: item.id,
+                    price: {
+                        raw: item.content.flightQuotes.cheapest.rawPrice,
+                        formatted: item.content.flightQuotes.cheapest.price
+                    },
+                    location: {
+                        id: item.content.location.id,
+                        skyCode: item.content.location.skyCode,
+                        name: item.content.location.name
+                    }
+                } as I_GeneralFlightSearch
+            })
         }
 
         if (groupByWeekends) {
-            return groupedResult
+            return {
+                responseType: situation,
+                groupedResult
+            }
         } else {
-            return result
+            return {
+                responseType: situation,
+                itineraries: result
+            }
         }
-
-
     }
-
 }
