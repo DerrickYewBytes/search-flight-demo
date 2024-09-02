@@ -48,11 +48,11 @@ class DestinationAndDatesConstraint implements ValidatorConstraintInterface {
 export class SearchUnfocusedRoundTripDto {
     @IsDefined()
     @IsString()
-    fromEntityId: string;
+    fromEntityId!: string;
 
     @IsOptional()
     @IsString()
-    toEntityId: string;
+    toEntityId?: string;
 
     @ValidateIf((o) => o.departDate)
     @IsDefined()
@@ -66,7 +66,7 @@ export class SearchUnfocusedRoundTripDto {
 
     @IsOptional()
     @IsString()
-    sort?: 'ASC' | 'DESC';
+    priceSort?: 'ASC' | 'DESC';
 
     @IsOptional()
     @IsBooleanString()

@@ -9,23 +9,23 @@ import {
 export class SearchFocusedRoundTripDto {
     @IsDefined()
     @IsString()
-    fromEntityId: string;
+    fromEntityId!: string;
 
     @IsDefined()
     @IsString()
-    toEntityId: string;
+    toEntityId!: string;
 
     @IsDefined()
     @IsDateString()
-    departDate: string;
+    departDate!: string;
 
     @IsDefined()
     @IsDateString()
-    returnDate: string;
+    returnDate!: string;
 
     @IsOptional()
     @IsString()
-    sort?: 'ASC' | 'DESC';
+    priceSort?: 'ASC' | 'DESC';
 
     @IsOptional()
     @IsBooleanString()

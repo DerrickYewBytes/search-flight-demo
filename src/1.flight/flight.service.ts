@@ -1,13 +1,14 @@
 /* eslint-disable prettier/prettier */
-import { Injectable } from '@nestjs/common';
-import { I_Itinerary, I_SearchRoundTripReq, I_SearchFocusedRoundTripRes, I_SearchUnfocusedRoundTripRes, I_SearchUnfocusedRoundTripReq, IE_SkyScannerSearchRoundTrip, IE_SkyScannerSearchRoundTripFocused, IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly, IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime, IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime, I_FlightQuote, I_GeneralFlightSearch, I_UnfocusedRoundTripTypes } from './flight.type';
 import { HttpService } from '@nestjs/axios';
-import * as MockSearchRoundTripFocused from '../util/mockApi/search-roundtrip-focused.json';
-import * as MockSearchRoundTripUnfocusedAnywhereAnytime from '../util/mockApi/search-roundtrip-unfocused-anywhere-anytime.json';
-import * as MockSearchRoundTripUnfocusedAnytimeOnly from '../util/mockApi/search-roundtrip-unfocused-anytime-only.json';
-import * as MockSearchRoundTripUnfocusedAnywhereFixedDate from '../util/mockApi/search-roundtrip-unfocused-anywhere-fixed-date.json';
-
+import { Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
+import * as MockSearchRoundTripFocused from '../util/mockApi/search-roundtrip-focused.json';
+import * as MockSearchRoundTripUnfocusedAnytimeOnly from '../util/mockApi/search-roundtrip-unfocused-anytime-only.json';
+import * as MockSearchRoundTripUnfocusedAnywhereAnytime from '../util/mockApi/search-roundtrip-unfocused-anywhere-anytime.json';
+import * as MockSearchRoundTripUnfocusedAnywhereFixedDate from '../util/mockApi/search-roundtrip-unfocused-anywhere-fixed-date.json';
+import { SearchFocusedRoundTripDto } from './dto/search-focused-round-trip.dto';
+import { SearchUnfocusedRoundTripDto } from './dto/search-unfocused-round-trip.dto';
+import { I_FlightQuote, I_GeneralFlightSearch, I_Itinerary, I_SearchFocusedRoundTripRes, I_SearchUnfocusedRoundTripRes, I_UnfocusedRoundTripTypes, IE_SkyScannerSearchRoundTrip, IE_SkyScannerSearchRoundTripFocused, IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly, IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime, IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime } from './flight.type';
 
 @Injectable()
 export class FlightService {
@@ -15,7 +16,7 @@ export class FlightService {
         private readonly httpService: HttpService
     ) { }
 
-    determineSkyScannerSearchRoundTripResponseType({ toEntityId, departDate, returnDate }: I_SearchRoundTripReq | I_SearchUnfocusedRoundTripReq): I_UnfocusedRoundTripTypes {
+    determineSkyScannerSearchRoundTripResponseType({ toEntityId, departDate, returnDate }: SearchFocusedRoundTripDto | SearchUnfocusedRoundTripDto): I_UnfocusedRoundTripTypes {
         let situation: I_UnfocusedRoundTripTypes
         const dateIsPresent = departDate && returnDate
         if (toEntityId && dateIsPresent) {
@@ -32,45 +33,44 @@ export class FlightService {
         return situation
     }
 
-    async mockSkyScannerSearchRoundTrip(params: I_SearchRoundTripReq | I_SearchUnfocusedRoundTripReq): Promise<IE_SkyScannerSearchRoundTrip> {
-        const situation = this.determineSkyScannerSearchRoundTripResponseType(params)
+    async skyScannerSearchRoundTrip(query: SearchFocusedRoundTripDto | SearchUnfocusedRoundTripDto): Promise<IE_SkyScannerSearchRoundTrip> {
+        if (process.env.NODE_ENV === 'DEV') {
+            const situation = this.determineSkyScannerSearchRoundTripResponseType(query)
 
-        switch (situation) {
-            case "focused":
-                return MockSearchRoundTripFocused as IE_SkyScannerSearchRoundTripFocused
-            case "unfocused-anytime":
-                return MockSearchRoundTripUnfocusedAnytimeOnly as IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
-            case "unfocused-anywhere":
-                return MockSearchRoundTripUnfocusedAnywhereFixedDate as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
-            case "unfocused-anywhere-anytime":
-                return MockSearchRoundTripUnfocusedAnywhereAnytime as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
-        }
-
-    }
-
-    async realSkyScannerSearchRoundTrip(param: I_SearchRoundTripReq): Promise<IE_SkyScannerSearchRoundTrip> {
-        const response = await firstValueFrom(this.httpService.get("https://sky-scanner3.p.rapidapi.com/flights/search-roundtrip", {
-            headers: {
-                "Content-Type": "application/ json",
-                "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
-                "X-RapidAPI-Host": "sky-scanner3.p.rapidapi.com"
-            },
-            params: {
-                fromEntityId: param.fromEntityId,
-                toEntityId: param.toEntityId,
-                departDate: param.departDate,
-                returnDate: param.returnDate
+            switch (situation) {
+                case "focused":
+                    return MockSearchRoundTripFocused as IE_SkyScannerSearchRoundTripFocused
+                case "unfocused-anytime":
+                    return MockSearchRoundTripUnfocusedAnytimeOnly as IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
+                case "unfocused-anywhere":
+                    return MockSearchRoundTripUnfocusedAnywhereFixedDate as IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
+                case "unfocused-anywhere-anytime":
+                    return MockSearchRoundTripUnfocusedAnywhereAnytime as IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
             }
-        }))
-        return response.data
+        } else if (process.env.NODE_ENV === 'TEST') {
+            const response = await firstValueFrom(this.httpService.get("https://sky-scanner3.p.rapidapi.com/flights/search-roundtrip", {
+                headers: {
+                    "Content-Type": "application/ json",
+                    "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
+                    "X-RapidAPI-Host": "sky-scanner3.p.rapidapi.com"
+                },
+                params: {
+                    fromEntityId: query.fromEntityId,
+                    toEntityId: query.toEntityId,
+                    departDate: query.departDate,
+                    returnDate: query.returnDate
+                }
+            }))
+            return response.data
+        }
     }
 
-    async searchFocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC" }: I_SearchRoundTripReq): Promise<I_SearchFocusedRoundTripRes> {
+    async searchFocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC" }: SearchFocusedRoundTripDto): Promise<I_SearchFocusedRoundTripRes> {
         let res
         if (process.env.NODE_ENV === 'DEV') {
-            res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+            res = await this.skyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         } else if (process.env.NODE_ENV === 'TEST') {
-            res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+            res = await this.skyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         }
         // Focused Trip Search
         const focusedRes = res as IE_SkyScannerSearchRoundTripFocused
@@ -118,7 +118,7 @@ export class FlightService {
 
     }
 
-    async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC", groupByWeekends = false }: I_SearchUnfocusedRoundTripReq): Promise<I_SearchUnfocusedRoundTripRes> {
+    async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC", groupByWeekends = false }: SearchUnfocusedRoundTripDto): Promise<I_SearchUnfocusedRoundTripRes> {
         let result: any
         let groupedResult: any
 
@@ -131,9 +131,9 @@ export class FlightService {
 
         let res
         if (process.env.NODE_ENV === 'DEV') {
-            res = await this.mockSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+            res = await this.skyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         } else if (process.env.NODE_ENV === 'TEST') {
-            res = await this.realSkyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
+            res = await this.skyScannerSearchRoundTrip({ fromEntityId, toEntityId, departDate, returnDate })
         }
 
         if (situation === 'unfocused-anytime') {

@@ -1,20 +1,3 @@
-export type I_SearchRoundTripReq = {
-    fromEntityId: string;
-    toEntityId: string;
-    departDate: string;
-    returnDate: string;
-    priceSort?: 'ASC' | 'DESC';
-};
-
-export type I_SearchUnfocusedRoundTripReq = {
-    fromEntityId: string;
-    toEntityId?: string;
-    departDate?: string;
-    returnDate?: string;
-    priceSort?: 'ASC' | 'DESC';
-    groupByWeekends?: boolean;
-};
-
 export type I_Itinerary = {
     id: string;
     price: {
