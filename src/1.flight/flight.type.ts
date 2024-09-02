@@ -39,11 +39,7 @@ export type I_SearchFocusedRoundTripRes = {
     itineraries: I_Itinerary[];
 };
 
-export type I_UnfocusedRoundTripTypes =
-    | 'focused'
-    | 'unfocused-anytime'
-    | 'unfocused-anywhere'
-    | 'unfocused-anywhere-anytime';
+export type I_UnfocusedRoundTripTypes = 'focused' | 'anytime' | 'everywhere';
 
 export type I_FlightQuote = {
     id: string;
@@ -94,9 +90,8 @@ export type I_SearchUnfocusedRoundTripRes =
 
 export type IE_SkyScannerSearchRoundTrip =
     | IE_SkyScannerSearchRoundTripFocused
-    | IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime
-    | IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly
-    | IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime
+    | IE_SkyScannerSearchRoundTripEverywhere
+    | IE_SkyScannerSearchRoundTripAnytime
     | IE_SkyScannerSearchRoundTripError;
 
 export type IE_SkyScannerSearchRoundTripError = {
@@ -298,86 +293,7 @@ export interface IE_SkyScannerSearchRoundTripFocused {
     [k: string]: unknown;
 }
 
-export interface IE_SkyScannerSearchRoundTripUnfocusedAnywhereAnytime {
-    data: {
-        everywhereDestination: {
-            context: {
-                status: string;
-                sessionId: string;
-                totalResults: number;
-                [k: string]: unknown;
-            };
-            features: {
-                flightsIndicative: string;
-                images: string;
-                ads: string;
-                [k: string]: unknown;
-            };
-            buckets: {
-                id: string;
-                label: string;
-                category: string;
-                resultIds: string[];
-                flightQuotes: string;
-                hotelQuotes: string;
-                [k: string]: unknown;
-            }[];
-            results: {
-                id: string;
-                type: string;
-                content: {
-                    location: {
-                        id: string;
-                        skyCode: string;
-                        name: string;
-                        type: string;
-                        [k: string]: unknown;
-                    };
-                    flightQuotes: {
-                        cheapest: {
-                            price: string;
-                            rawPrice: number;
-                            direct: boolean;
-                            [k: string]: unknown;
-                        };
-                        direct?: {
-                            price: string;
-                            rawPrice: number;
-                            direct: boolean;
-                            [k: string]: unknown;
-                        };
-                        [k: string]: unknown;
-                    };
-                    image: {
-                        url: string;
-                        [k: string]: unknown;
-                    };
-                    flightRoutes: {
-                        directFlightsAvailable: boolean;
-                        [k: string]: unknown;
-                    };
-                    [k: string]: unknown;
-                };
-                entityId: string;
-                skyId: string;
-                [k: string]: unknown;
-            }[];
-            [k: string]: unknown;
-        };
-        context: {
-            status: string;
-            sessionId: string;
-            totalResults: number;
-            [k: string]: unknown;
-        };
-        [k: string]: unknown;
-    };
-    status: boolean;
-    message: string;
-    [k: string]: unknown;
-}
-
-export interface IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly {
+export interface IE_SkyScannerSearchRoundTripAnytime {
     data: {
         flightQuotes: {
             buckets: {
@@ -482,7 +398,7 @@ export interface IE_SkyScannerSearchRoundTripUnfocusedAnytimeOnly {
     [k: string]: unknown;
 }
 
-export interface IE_SkyScannerSearchRoundTripUnfocusedAnywhereFixedTime {
+export interface IE_SkyScannerSearchRoundTripEverywhere {
     data: {
         everywhereDestination: {
             context: {
