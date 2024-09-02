@@ -16,6 +16,14 @@ export class FlightService {
         private readonly httpService: HttpService
     ) { }
 
+    /**
+     * Checks for type of search query used and determines its process type(focused/unfocused-anytime/unfocused-anywhere/unfocused-anywhere-anytime).
+     * 
+     * @param {string} toEntityId 
+     * @param {string} departDate 
+     * @param {string} returnDate 
+     * @returns {I_UnfocusedRoundTripTypes} focused / unfocused-anytime / unfocused-anywhere / unfocused-anywhere-anytime
+     */
     determineSkyScannerSearchRoundTripResponseType({ toEntityId, departDate, returnDate }: SearchFocusedRoundTripDto | SearchUnfocusedRoundTripDto): I_UnfocusedRoundTripTypes {
         let situation: I_UnfocusedRoundTripTypes
         const dateIsPresent = departDate && returnDate
@@ -33,6 +41,14 @@ export class FlightService {
         return situation
     }
 
+    /**
+     * Calls sky scanner search round trip API in RapidAPI. This function can return actual API response or mock API response depending on the environment used.
+     * @param {string} fromEntityId 
+     * @param {string} toEntityId 
+     * @param {string} departDate 
+     * @param {string} returnDate 
+     * @returns IE_SkyScannerSearchRoundTrip
+     */
     async skyScannerSearchRoundTrip(query: SearchFocusedRoundTripDto | SearchUnfocusedRoundTripDto): Promise<IE_SkyScannerSearchRoundTrip> {
         if (process.env.NODE_ENV === 'DEV') {
             const situation = this.determineSkyScannerSearchRoundTripResponseType(query)
@@ -65,6 +81,18 @@ export class FlightService {
         }
     }
 
+    /**
+     * Handles focused trip search. Will return mock API response or actual API response depending on the environment used.
+     * Result is by default set to sort ascendingly, and this can be changed by the priceSort parameter.
+     * 
+     * note: fromEntityId, toEntityId, departDate, returnDate must be provided.  
+     * @param {string} fromEntityId 
+     * @param {string} toEntityId 
+     * @param {string} departDate 
+     * @param {string} returnDate 
+     * @param {"ASC" | "DESC"} priceSort - ASC or DESC
+     * @returns I_SearchFocusedRoundTripRes
+     */
     async searchFocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC" }: SearchFocusedRoundTripDto): Promise<I_SearchFocusedRoundTripRes> {
         let res
         if (process.env.NODE_ENV === 'DEV') {
@@ -118,6 +146,22 @@ export class FlightService {
 
     }
 
+    /**
+     * Handles unfocused trip search. Can handle empty toEntityId and empty dates to return unfocused search result. 
+     * Will return mock API response or actual API response depending on the environment used.
+     * Result is by default set to sort ascendingly, and this can be changed by the priceSort parameter.
+     * If groupByWeekends is true, it will group results by weekend and weekday.
+     * 
+     * note: fromEntityId must be provided.
+     * groupByWeekends is only available for unfocused-anytime scenario
+     * @param {string} fromEntityId 
+     * @param {string} toEntityId 
+     * @param {string} departDate 
+     * @param {string} returnDate 
+     * @param {"ASC" | "DESC"} priceSort - ASC or DESC
+     * @param {boolean} groupByWeekends
+     * @returns I_SearchUnfocusedRoundTripRes
+     */
     async searchUnfocusedRoundTrip({ fromEntityId, toEntityId, departDate, returnDate, priceSort = "ASC", groupByWeekends = false }: SearchUnfocusedRoundTripDto): Promise<I_SearchUnfocusedRoundTripRes> {
         let result: any
         let groupedResult: any
