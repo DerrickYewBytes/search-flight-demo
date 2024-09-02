@@ -30,10 +30,8 @@ export class FlightService {
             situation = "focused";
         } else if (toEntityId && !dateIsPresent) {
             situation = "anytime";
-        } else if (!toEntityId && dateIsPresent) {
+        } else if (!toEntityId) {
             situation = "everywhere"
-        } else if (!toEntityId && !dateIsPresent) {
-            situation = "everywhere";
         } else {
             throw new Error("Invalid parameters, please check your input to match searchUnfocusedRoundTrip's query format");
         }
